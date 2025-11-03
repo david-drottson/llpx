@@ -37,3 +37,87 @@ li {
   margin: 0 0;
   padding: 0 0;
 }
+
+.pmt__location-card-item:first-child {
+  margin-top: 1em;
+}
+
+.pmt__location-list-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5em;
+  padding: 1em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pmt__location-list-card:hover {
+  background-color: #f5f5f5;
+  border-color: #b0b0b0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pmt__location-list-card-name {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+}
+
+.pmt__location-list-card-description {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 0.5em;
+}
+
+.pmt__card {
+  background-color: #ffffff;
+  padding: 1.5em;
+  border-radius: 0.5em;
+}
+
+.pmt__location-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.75em;
+  color: #333;
+}
+
+.pmt__location-address {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 0.75em;
+  line-height: 1.5;
+}
+
+.pmt__location-hours {
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 0.75em;
+  line-height: 1.6;
+}
+
+.pmt__location-description {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 0.75em;
+  line-height: 1.5;
+}
+
+.pmt__location-button {
+  display: inline-block;
+  background-color: #0066cc;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 0.75em 1.5em;
+  border-radius: 0.5em;
+  margin-top: 1em;
+  transition: background-color 0.2s ease;
+  text-align: center;
+  font-weight: 500;
+}
+
+.pmt__location-button:hover {
+  background-color: #004499;
+  color: #ffffff;
+}
