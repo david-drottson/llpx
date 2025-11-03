@@ -1,0 +1,19 @@
+{
+  "name": "llpx",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cp node_modules/htmx.org/dist/htmx.min.js public/htmx.min.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.8.1",
+    "express": "^5.1.0",
+    "htmx.org": "^2.0.8",
+    "pug": "^3.0.3"
+  }
+}

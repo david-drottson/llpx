@@ -1,0 +1,6 @@
+div.locations-list
+  each location in locations
+    a.location-item(href=`/locations/${location.id}`)
+      h3.location-name= location.name
+      p.location-description= location.description
+
