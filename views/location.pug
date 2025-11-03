@@ -1,13 +1,49 @@
 .pmt__card
-  .pmt__card-header
-    .pmt__location-details
+  .pmt__location-name= location.name
 
+  if location.address
+    .pmt__location-address
+      = location.address.street
+      | ,
+      = location.address.city
+      | ,
+      = location.address.state
+      |
+      = location.address.zip
+
+  if location.hours
+    .pmt__location-hours
+      - const mon = location.hours.monday
+      - const tue = location.hours.tuesday
+      - const wed = location.hours.wednesday
+      - const thu = location.hours.thursday
+      - const fri = location.hours.friday
+      - const monFriSame = mon && tue && wed && thu && fri && JSON.stringify(mon) === JSON.stringify(tue) && JSON.stringify(tue) === JSON.stringify(wed) && JSON.stringify(wed) === JSON.stringify(thu) && JSON.stringify(thu) === JSON.stringify(fri)
+      if monFriSame
+        | Mon-Fri: #{mon.open}-#{mon.close}
+      else
+        if mon
+          | Mon: #{mon.open}-#{mon.close}
+        if tue
+          br
+          | Tue: #{tue.open}-#{tue.close}
+        if wed
+          br
+          | Wed: #{wed.open}-#{wed.close}
+        if thu
+          br
+          | Thu: #{thu.open}-#{thu.close}
+        if fri
+          br
+          | Fri: #{fri.open}-#{fri.close}
+      if location.hours.saturday
+        br
+        | Sat: #{location.hours.saturday.open}-#{location.hours.saturday.close}
+      if location.hours.sunday
+        br
+        | Sun: #{location.hours.sunday.open}-#{location.hours.sunday.close}
+
+  if location.description
     .pmt__location-description= location.description
 
-    ul.pmt__location-services
-      each service in location.services
-        li.pmt__location-service= service
-
-    ul.pmt__location-goods
-      each good in location.goods
-        li.pmt__location-good= good
+  a.pmt__location-button(href=`/store/${location.id}`) Visit Store Page
