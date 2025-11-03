@@ -6,10 +6,12 @@ html(lang="en")
     title Location Details
     link(rel="stylesheet", href="/styles.css")
     script(src="/htmx.min.js")
-  body(hx-trigger="load" hx-get="/locations" hx-target="#location-list")
-    form.search-bar(hx-get="/locations" hx-target="#location-list")
-        input(type="text" name="search" placeholder="Search for a location")
-        button(type="submit") Search
-
-    ul#location-list
-    #location-container
+  body
+    .pmt__store-locator(hx-trigger="load" hx-get="/locations" hx-target="#pmt__location-list")
+      .pmt__sidebar
+        form.search-bar(hx-get="/locations" hx-target="#pmt__location-list")
+            input(class="pmt__search-input" type="text" name="search" placeholder="Search for a location")
+            button(class="pmt__search-button" type="submit") Search
+        ul#pmt__location-list
+  
+      #pmt__location-container

@@ -1,13 +1,13 @@
-.pmt-card
-  .pmt-card__header
-    .pmt-location-detai
+.pmt__card
+  .pmt__card-header
+    .pmt__location-details
 
-    .pmt-location-description= location.description
+    .pmt__location-description= location.description
 
-    ul.pmt-location-services
+    ul.pmt__location-services
       each service in location.services
-        li.pmt-location-service= service
+        li.pmt__location-service= service
 
-    ul.pmt-location-goods
+    ul.pmt__location-goods
       each good in location.goods
-        li.pmt-location-good= good
+        li.pmt__location-good= good

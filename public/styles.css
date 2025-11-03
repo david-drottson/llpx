@@ -1,3 +1,39 @@
-body {
+.pmt__store-locator {
   display: flex;
+}
+
+.pmt__sidebar {
+  background-color: #f0f0f0;
+  padding: 1em;
+  border-radius: 1em;
+  margin: 1em;
+}
+
+#pmt__location-container {
+  background-color: #ddfae8;
+  padding: 1em;
+  border-radius: 1em;
+  margin: 1em;
+}
+
+#pmt__location-list {
+  list-style-type: none;
+}
+
+.pmt__location-services {
+  list-style-type: none;
+}
+
+.pmt__location-goods {
+  list-style-type: none;
+}
+
+ul {
+  margin: 0 0;
+  padding: 0 0;
+}
+
+li {
+  margin: 0 0;
+  padding: 0 0;
 }
