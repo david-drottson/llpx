@@ -1,2 +1,6 @@
 each location in locations
-    li.pmt-location-name(hx-get=`/locations/${location.id}` hx-target=".pmt__location-container")= location.name
+    li.pmt__location-card-item
+      .pmt__location-list-card(hx-get=`/locations/${location.id}` hx-target=".pmt__location-container")
+        .pmt__location-list-card-name= location.name
+        if location.description
+          .pmt__location-list-card-description= location.description
