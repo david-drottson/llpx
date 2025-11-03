@@ -9,14 +9,14 @@
   margin: 1em;
 }
 
-#pmt__location-container {
+.pmt__location-container {
   background-color: #ddfae8;
   padding: 1em;
   border-radius: 1em;
   margin: 1em;
 }
 
-#pmt__location-list {
+.pmt__location-list {
   list-style-type: none;
 }
 
