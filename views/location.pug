@@ -1,26 +1,13 @@
-extends layout
+.pmt-card
+  .pmt-card__header
+    .pmt-location-detai
 
-block content
-  div.location-detail
-    h2= location.name
-    p.description= location.description
-    
-    div.location-info
-      div.coordinates
-        h3 Coordinates
-        p Lat: #{location.coordinates.lat}, Lng: #{location.coordinates.lng}
-      
-      - var hours = location.hours
-      include components/hours
-      
-      div.services
-        h3 Services
-        ul
-          each service in location.services
-            li= service
-      
-      div.goods
-        h3 Goods
-        ul
-          each good in location.goods
-            li= good
+    .pmt-location-description= location.description
+
+    ul.pmt-location-services
+      each service in location.services
+        li.pmt-location-service= service
+
+    ul.pmt-location-goods
+      each good in location.goods
+        li.pmt-location-good= good

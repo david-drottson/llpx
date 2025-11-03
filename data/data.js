@@ -4,6 +4,13 @@ const LOCATIONS_DATA = [
     name: "Blue Bottle Coffee",
     description: "Artisan coffee shop known for single-origin coffee and minimalist aesthetic",
     coordinates: { lat: 37.7749, lng: -122.4194 },
+    address: {
+      street: "123 Main St",
+      city: "San Francisco",
+      state: "CA",
+      zip: "94101",
+      country: "USA"
+    },
     hours: {
       monday: { open: "07:00", close: "19:00" },
       tuesday: { open: "07:00", close: "19:00" },

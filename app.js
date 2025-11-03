@@ -17,25 +17,25 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.render("index", { locations: LOCATIONS_DATA });
+   res.render("index");
 });
 
-app.get("/home", (req, res) => {
-  res.render("home", { locations: LOCATIONS_DATA });
+app.get("/locations", (req, res) => {
+  const searchQuery = req.query.search || "";
+  const filteredLocations = LOCATIONS_DATA.filter((location) => location.name.toLowerCase().includes(searchQuery.toLowerCase())
+);
+  res.render("locations", {
+    locations: filteredLocations });
 });
 
-app.get("/about", (req, res) => {
-  res.render("about");
-});
-``
 app.get("/locations/:id", (req, res) => {
   const { id } = req.params;
   const location = LOCATIONS_DATA.find((loc) => loc.id === id);
-  
+
   if (!location) {
     return res.status(404).render("404", { id });
   }
-  
+
   res.render("location", { location });
 });
 

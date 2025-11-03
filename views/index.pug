@@ -1,4 +1,15 @@
-extends layout
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Location Details
+    link(rel="stylesheet", href="/styles.css")
+    script(src="/htmx.min.js")
+  body(hx-trigger="load" hx-get="/locations" hx-target="#location-list")
+    form.search-bar(hx-get="/locations" hx-target="#location-list")
+        input(type="text" name="search" placeholder="Search for a location")
+        button(type="submit") Search
 
-block content
-  include home
+    ul#location-list
+    #location-container
